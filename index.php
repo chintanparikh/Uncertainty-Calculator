@@ -96,14 +96,6 @@ function roundTo($num, $dec)
 		{
 			$new = round($num, $dec);
 			return $new;
-			/* OLD CRAPPY CODE L2MATHS
-			$newdec = round($decpart,($dec-$digits));
-			$len = strlen((string)$newdec);
-			$chars = $len - $dec;
-			$newdec = substr($newdec, 0, $chars-1);
-                        $newdec = $numsplit[0] . '.' . (string)$newdec;
-			return $newdec;
-			*/
 		}
 		elseif($digits < $dec) // For when the number of digits after the decimal point is less than the number of digits we want to round to.
 		{
@@ -189,7 +181,7 @@ else
 		print '<a href="index.php">Do another equation!</a>';
 		break;
 	default:
-		print "ehm, there has been an error, this shouldn't be appearing";
+		print "There has been an error, this shouldn't be appearing";
 		break;
 	}
 }
